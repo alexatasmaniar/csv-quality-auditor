@@ -1,0 +1,7 @@
+customer_id,name,email,phone,age
+1,Alice Stone,alice@example.com,+12025550101,29
+2,Bob Miles,bob@example.com,+442071838750,34
+3, Carol Reed ,not-an-email,+4915123456789,41
+4,Dan Wu,dan@example.com,123,27
+5,Elena Park,,+12025550105,
+5,Elena Park,,+12025550105,

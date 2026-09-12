@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-quality-auditor"
+version = "0.1.0"
+description = "A dependency-light CLI for auditing CSV data quality."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Alex"}
+]
+keywords = ["csv", "data-quality", "cli", "automation", "validation"]
+
+[project.scripts]
+csv-quality-auditor = "csv_quality_auditor.cli:main"
+
+[tool.setuptools]
+packages = ["csv_quality_auditor"]
