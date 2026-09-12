@@ -63,20 +63,23 @@ File: examples/customers.csv
 Rows: 6
 Columns: 5
 Duplicate rows: 1
-Quality score: 78.3/100
+Quality score: 86.5/100
 
 Column summary:
 - customer_id: missing=0, whitespace=0, inferred=integer
-- name: missing=0, whitespace=2, inferred=text
-- email: missing=1, whitespace=0, inferred=email, invalid=1
+- name: missing=0, whitespace=1, inferred=text
+- email: missing=2, whitespace=0, inferred=email, invalid=1
 - phone: missing=0, whitespace=0, inferred=phone, invalid=1
-- age: missing=1, whitespace=0, inferred=integer
+- age: missing=2, whitespace=0, inferred=integer
 ```
 
 ## Project structure
 
 ```text
 csv-quality-auditor/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── csv_quality_auditor/
 │   ├── __init__.py
 │   ├── __main__.py
@@ -87,9 +90,7 @@ csv-quality-auditor/
 │   └── customers.csv
 ├── tests/
 │   └── test_audit.py
-├── .github/
-│   └── workflows/
-│       └── ci.yml
+├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
 └── README.md
@@ -106,6 +107,12 @@ The code separates:
 - report rendering (`render.py`).
 
 That keeps the project small while still making it easy to extend.
+
+## Continuous integration
+
+GitHub Actions automatically runs the test suite and a CLI smoke test on every push and pull request.
+
+The workflow currently checks the project with Python 3.12.
 
 ## Possible next steps
 
